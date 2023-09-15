@@ -69,12 +69,12 @@ fit
 
 (d) Give and interpret a 95% confidence interval for the slope coefficient. (You can use the `confint()` command.)
 
-\textbf{Answer:}
+\textbf{Answer:} We are 95% confident that for every inch of length longer a Bear is, the girth of the bear increases by 
 
 ```{r}
 #code with comments here
 
-confint()
+confint(fit)
 ```
 
 (e) Suppose for a different species of bear, the scientists sample 25 bears and for their estimated linear model they find a slope coefficient estimate of $\hat{\beta} = 0.425$ and SE($\hat{\beta}$) = 0.068. Give a 90% confidence interval for the true slope coefficient. (Note: this question does not rely on the dataset used for the questions above. Use the estimated slope and SE given here, and the `qt()` function to get the appropriate critical value.)
