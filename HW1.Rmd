@@ -64,7 +64,7 @@ fit
 
 (c) What is the interpretation of the slope coefficient?
 
-\textbf{Answer:} "for every extra inch of length, the estimated average girth of the bear increases by .5462 inches"
+\textbf{Answer:} "for each extra inch of length of a bear , the estimated average girth of the bear increases by .5462 inches"
 
 (d) Give and interpret a 95% confidence interval for the slope coefficient. (You can use the `confint()` command.)
 
