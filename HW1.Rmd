@@ -44,7 +44,7 @@ The data record the length and girth measurements (in inches) for a sample of gr
 library(ggplot2)
 
 #creates base graph (girth against length) with points shown
-bear_girth_on_length <- ggplot(data=grizzly) +aes(x = Length, y = Girth) + geom_point() + labs(title = "regression of bear girth against length", x = "Length of Bear (in inches)", y = "Girth of Bear (in inches)")
+bear_girth_on_length <- ggplot(data=grizzly) +aes(x = Length, y = Girth) + geom_point() + labs(title = "Regression of bear girth against length", x = "Length of Bear (in inches)", y = "Girth of Bear (in inches)")
 
 #adds least squares line
 bear_girth_on_length + geom_smooth(method = "lm", se = FALSE)
@@ -52,9 +52,8 @@ bear_girth_on_length + geom_smooth(method = "lm", se = FALSE)
 
 (b) Find (and write out) the equation of the estimated linear model of the expected girth given length. (Here I am just asking for the equation of the fitted values, $\hat{Y}$; it is not necessary to state the assumptions about the errors here. Do not just print the R output; you need to write down the equation.)
 
-\textbf{Answer:} $\hat{Y}$ = 32.6678 + .5462(Length)
+\textbf{Answer:} $\hat{Girth}$ = 32.6678 + .5462(Length)
 
-(Note that in the equation $\hat{Y}$ is the predicted Girth of the grizzly)
 
 ```{r}
 #code with comments here
@@ -65,11 +64,11 @@ fit
 
 (c) What is the interpretation of the slope coefficient?
 
-\textbf{Answer:} "for every extra inch of length, we expect the girth of the bear to increase by .5462 inches"
+\textbf{Answer:} "for every extra inch of length, the estimated average girth of the bear increases by .5462 inches"
 
 (d) Give and interpret a 95% confidence interval for the slope coefficient. (You can use the `confint()` command.)
 
-\textbf{Answer:} We are 95% confident that for every inch of length longer a Bear is, the girth of the bear increases by 
+\textbf{Answer:} We are 95% confident that for every extra inch of Length of a Bear, the estimated average girth of the bear increases between .3855978 and .7067615 inches.
 
 ```{r}
 #code with comments here
