@@ -13,14 +13,13 @@ The answers to the following questions can be found on page 56. You should think
 
 \textbf{Chapter 2, Exercise 3 Answer:}
 
-
 \vspace{4pt}
+
 \textbf{Chapter 2, Exercise 4 Answer:}
 
-
 \vspace{4pt}
-\textbf{Chapter 2, Exercise 7 Answer:}
 
+\textbf{Chapter 2, Exercise 7 Answer:}
 
 \vspace{15pt}
 
@@ -32,11 +31,11 @@ Load the following dataset:
 grizzly <- read.csv('https://www.math.carleton.edu/ckelling/data/Grizzly.csv', header=TRUE)
 ```
 
-The data record the length and girth measurements (in inches) for a sample of grizzlies. 
+The data record the length and girth measurements (in inches) for a sample of grizzlies.
 
 (a) Plot the bear's girth (response variable) against its length (predictor variable) and show the least squares line. Make sure the plot has appropriate axis labels. Comment on the apparent relationship (strength, shape, direction).
 
-\textbf{Answer:}
+\textbf{Answer:} The relationship appears to have a relatively strong positive correlation. The relationship also has
 
 ```{r}
 #code with comments here
@@ -53,18 +52,20 @@ bear_girth_on_length + geom_smooth(method = "lm", se = FALSE)
 
 (b) Find (and write out) the equation of the estimated linear model of the expected girth given length. (Here I am just asking for the equation of the fitted values, $\hat{Y}$; it is not necessary to state the assumptions about the errors here. Do not just print the R output; you need to write down the equation.)
 
-\textbf{Answer:}
+\textbf{Answer:} $\hat{Y}$ = 32.6678 + .5462(Length)
+
+(Note that in the equation $\hat{Y}$ is the predicted Girth of the grizzly)
 
 ```{r}
 #code with comments here
-
+fit <- lm(Girth ~ Length, data = grizzly)
+fit
 
 ```
 
 (c) What is the interpretation of the slope coefficient?
 
-\textbf{Answer:}
-
+\textbf{Answer:} "for every extra inch of length, we expect the girth of the bear to increase by .5462 inches"
 
 (d) Give and interpret a 95% confidence interval for the slope coefficient. (You can use the `confint()` command.)
 
@@ -86,4 +87,5 @@ confint()
 ```
 
 ## Recommended conceptual exercises (do not turn in, answers in book/Moodle):
+
 Chapter 7 exercises 3, 4, 5, 9, 10, 12
