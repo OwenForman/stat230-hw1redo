@@ -1,0 +1,89 @@
+---
+title: "STAT 230 HW 1"
+author: "Owen Forman" 
+output:
+  pdf_document: default
+  html_document:
+    df_print: paged
+---
+
+**1.** (Conceptual review) Chapter 2, exercises 3, 4, and 7
+
+The answers to the following questions can be found on page 56. You should think about these questions before looking at the answers. You will receive full credit for answering the questions.
+
+\textbf{Chapter 2, Exercise 3 Answer:}
+
+
+\vspace{4pt}
+\textbf{Chapter 2, Exercise 4 Answer:}
+
+
+\vspace{4pt}
+\textbf{Chapter 2, Exercise 7 Answer:}
+
+
+\vspace{15pt}
+
+**2.** (Grizzlies)
+
+Load the following dataset:
+
+```{r}
+grizzly <- read.csv('https://www.math.carleton.edu/ckelling/data/Grizzly.csv', header=TRUE)
+```
+
+The data record the length and girth measurements (in inches) for a sample of grizzlies. 
+
+(a) Plot the bear's girth (response variable) against its length (predictor variable) and show the least squares line. Make sure the plot has appropriate axis labels. Comment on the apparent relationship (strength, shape, direction).
+
+\textbf{Answer:}
+
+```{r}
+#code with comments here
+
+#load libraries
+library(ggplot2)
+
+#creates base graph (girth against length) with points shown
+bear_girth_on_length <- ggplot(data=grizzly) +aes(x = Length, y = Girth) + geom_point() + labs(title = "regression of bear girth against length", x = "Length of Bear (in inches)", y = "Girth of Bear (in inches)")
+
+#adds least squares line
+bear_girth_on_length + geom_smooth(method = "lm", se = FALSE)
+```
+
+(b) Find (and write out) the equation of the estimated linear model of the expected girth given length. (Here I am just asking for the equation of the fitted values, $\hat{Y}$; it is not necessary to state the assumptions about the errors here. Do not just print the R output; you need to write down the equation.)
+
+\textbf{Answer:}
+
+```{r}
+#code with comments here
+
+
+```
+
+(c) What is the interpretation of the slope coefficient?
+
+\textbf{Answer:}
+
+
+(d) Give and interpret a 95% confidence interval for the slope coefficient. (You can use the `confint()` command.)
+
+\textbf{Answer:}
+
+```{r}
+#code with comments here
+
+confint()
+```
+
+(e) Suppose for a different species of bear, the scientists sample 25 bears and for their estimated linear model they find a slope coefficient estimate of $\hat{\beta} = 0.425$ and SE($\hat{\beta}$) = 0.068. Give a 90% confidence interval for the true slope coefficient. (Note: this question does not rely on the dataset used for the questions above. Use the estimated slope and SE given here, and the `qt()` function to get the appropriate critical value.)
+
+\textbf{Answer:}
+
+```{r}
+#code with comments here
+
+```
+
+## Recommended conceptual exercises (do not turn in, answers in book/Moodle):
+Chapter 7 exercises 3, 4, 5, 9, 10, 12
