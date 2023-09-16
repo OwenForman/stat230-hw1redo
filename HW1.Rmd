@@ -82,12 +82,31 @@ confint(fit)
 
 (e) Suppose for a different species of bear, the scientists sample 25 bears and for their estimated linear model they find a slope coefficient estimate of $\hat{\beta} = 0.425$ and SE($\hat{\beta}$) = 0.068. Give a 90% confidence interval for the true slope coefficient. (Note: this question does not rely on the dataset used for the questions above. Use the estimated slope and SE given here, and the `qt()` function to get the appropriate critical value.)
 
-\textbf{Answer:}
+\textbf{Answer:} The 90% confidence interval for the true slope coefficient is (.308, .542) 
+
+Note: these values are rounded to the third decimal place.
 
 ```{r}
 #code with comments here
 
+#sets given variables (note df is n-2)
+df <- 25 - 2
+SE <- 0.068
+beta1 <- 0.425
 
+#runs qt function
+crit_val <- qt(.95, df)
+
+
+#lower bound calculation
+lower_bound <-beta1 - crit_val * SE
+
+#upper bound calc
+upper_bound <- beta1 +crit_val * SE
+
+#print lower and upper bound values for viewin
+lower_bound
+upper_bound
 ```
 
 ## Recommended conceptual exercises (do not turn in, answers in book/Moodle):
