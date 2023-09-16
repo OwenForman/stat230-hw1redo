@@ -19,7 +19,7 @@ The answers to the following questions can be found on page 56. You should think
 
 \vspace{4pt}
 
-\textbf{Chapter 2, Exercise 7 Answer:} If we have a 95% confidence interval of (0.61, 1.19) this means we are 95% confident that the mean head circumference of babies whose mother did not smoke marijuana is between .61cm and 1.19 cm larger than babies whose mother did smoke marijuana. If we assume our null hypothesis is that smoking marijuana has no effect on mean baby head circumference, then this confidence interval would imply that the p-value is less than .05, since the value 0 (no difference in mean baby head circumference) does not fall within our 95% confidence interval. 
+\textbf{Chapter 2, Exercise 7 Answer:} If we have a 95% confidence interval of (0.61, 1.19) this means we are 95% confident that the mean head circumference of babies whose mother did not smoke marijuana is between .61cm and 1.19 cm larger than babies whose mother did smoke marijuana. If we assume our null hypothesis is that smoking marijuana has no effect on mean baby head circumference, then this confidence interval would imply that the p-value is less than .05, since the value 0 (no difference in mean baby head circumference) does not fall within our 95% confidence interval.
 
 \vspace{15pt}
 
@@ -44,7 +44,7 @@ The data record the length and girth measurements (in inches) for a sample of gr
 library(ggplot2)
 
 #creates base graph (girth against length) with points shown
-bear_girth_on_length <- ggplot(data=grizzly) +aes(x = Length, y = Girth) + geom_point() + labs(title = "Regression of bear girth against length", x = "Length of Bear (in inches)", y = "Girth of Bear (in inches)")
+bear_girth_on_length <- ggplot(data=grizzly) +aes(x = Length, y = Girth) + geom_point() + labs(title = "Regression of Bear Girth Against Length", x = "Length of Bear (in inches)", y = "Girth of Bear (in inches)")
 
 #adds least squares line
 bear_girth_on_length + geom_smooth(method = "lm", se = FALSE)
@@ -53,7 +53,6 @@ bear_girth_on_length + geom_smooth(method = "lm", se = FALSE)
 (b) Find (and write out) the equation of the estimated linear model of the expected girth given length. (Here I am just asking for the equation of the fitted values, $\hat{Y}$; it is not necessary to state the assumptions about the errors here. Do not just print the R output; you need to write down the equation.)
 
 \textbf{Answer:} $\hat{Girth}$ = 32.6678 + .5462(Length)
-
 
 ```{r}
 #code with comments here
