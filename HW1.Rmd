@@ -28,6 +28,7 @@ The answers to the following questions can be found on page 56. You should think
 Load the following dataset:
 
 ```{r}
+#load grizzly dataset
 grizzly <- read.csv('https://www.math.carleton.edu/ckelling/data/Grizzly.csv', header=TRUE)
 ```
 
@@ -35,7 +36,7 @@ The data record the length and girth measurements (in inches) for a sample of gr
 
 (a) Plot the bear's girth (response variable) against its length (predictor variable) and show the least squares line. Make sure the plot has appropriate axis labels. Comment on the apparent relationship (strength, shape, direction).
 
-\textbf{Answer:} The relationship appears to have a relatively strong positive correlation. The relationship also appears to follow a linear trend
+\textbf{Answer:} The relationship appears to have a relatively strong positive correlation. The relationship also appears to follow a linear trend.
 
 ```{r}
 #code with comments here
@@ -71,7 +72,7 @@ fit
 
 (d) Give and interpret a 95% confidence interval for the slope coefficient. (You can use the `confint()` command.)
 
-\textbf{Answer:} We are 95% confident that for every extra inch of Length of a Bear, the estimated average girth of the bear increases between .3855978 and .7067615 inches.
+\textbf{Answer:} We are 95% confident that for every extra inch of Length of a Bear, the  average girth of the bear increases between .3855978 and .7067615 inches.
 
 ```{r}
 #code with comments here
@@ -82,7 +83,7 @@ confint(fit)
 
 (e) Suppose for a different species of bear, the scientists sample 25 bears and for their estimated linear model they find a slope coefficient estimate of $\hat{\beta} = 0.425$ and SE($\hat{\beta}$) = 0.068. Give a 90% confidence interval for the true slope coefficient. (Note: this question does not rely on the dataset used for the questions above. Use the estimated slope and SE given here, and the `qt()` function to get the appropriate critical value.)
 
-\textbf{Answer:} The 90% confidence interval for the true slope coefficient is (.308, .542) 
+\textbf{Answer:} The 90% confidence interval for the true slope coefficient is (.308, .542)
 
 Note: these values are rounded to the third decimal place.
 
@@ -104,7 +105,7 @@ lower_bound <-beta1 - crit_val * SE
 #upper bound calc
 upper_bound <- beta1 +crit_val * SE
 
-#print lower and upper bound values for viewin
+#print lower and upper bound values for viewing
 lower_bound
 upper_bound
 ```
